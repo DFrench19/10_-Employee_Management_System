@@ -40,7 +40,7 @@ const { choice } = prompt([
             },
             {
                 name: "Update Employee Role",
-                value: "Update_Employee_ROle"
+                value: "Update_Employee_Role"
             },
             {
                 name: "Update Employee Manager",
@@ -77,3 +77,35 @@ const { choice } = prompt([
         ]
     }
 ])
+
+switch (choice) {
+    case "View_Employee":
+      return viewEmployees();
+    case "View_Employee_By_Department":
+      return viewEmployeesByDepartment();
+    case "View_Employee_By_Manager":
+      return viewEmployeesByManager();
+    case "Add_Employee":
+      return addEmployee();
+    case "Remove_Employee":
+      return removeEmployee();
+    case "Update_Employee_Role":
+      return updateEmployeeRole();
+    case "Update_Employee_Manager":
+      return updateEmployeeManager();
+    case  "View_Departments":
+      return viewDepartments();
+    case "Add_Department":
+      return addDepartment();
+    case "Remove_Department":
+      return removeDepartment();
+    case "View_Roles":
+      return viewRoles();
+    case "Add_Role":
+      return addRole();
+    case "Remove_Role":
+      return removeRole();
+    default:
+      return quit();
+
+  }
